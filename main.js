@@ -5,7 +5,6 @@ const url = require('url');
 // Initiate window
 let win;
 
-
 function createWindow(){
     // Create window
     win = new BrowserWindow({width:1000, height:1000});
@@ -19,7 +18,8 @@ function createWindow(){
 
     // Open devtools
     win.webContents.openDevTools();
-
+    
+    // Close window
     win.on('closed', () =>{
         win = null;
     })
